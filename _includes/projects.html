@@ -3,14 +3,42 @@
         <div class="projects-header">
             <span class="eyebrow">Projects</span>
             <h2 class="section-title">Selected Work</h2>
-            <p class="projects-intro">A concise set of systems showing my work across AI, Moodle and Gibbon platforms, identity infrastructure, analytics, and operational automation.</p>
+            <p class="projects-intro">Production systems across AI, identity infrastructure, Moodle/Gibbon ecosystems, analytics, and operational automation — each designed, built, and operated end-to-end.</p>
         </div>
+
+        {% assign flagship = site.projects | first %}
+        {% if flagship %}
+        <div class="featured-project fade-in">
+            <div class="featured-badge">Flagship Project</div>
+            <div class="featured-project-inner">
+                <div class="featured-screenshot">
+                    <img src="{{ flagship.card_screenshot | relative_url }}" alt="{{ flagship.title }}" loading="lazy" onerror="this.style.display='none'; this.parentElement.querySelector('.placeholder-icon').style.display='flex';">
+                    <span class="placeholder-icon" style="display:none;" aria-hidden="true">{{ flagship.placeholder_icon }}</span>
+                </div>
+                <div class="featured-body">
+                    <div class="featured-meta">
+                        <span class="project-tag featured-tag">{{ flagship.card_tag }}</span>
+                        <span class="project-status">{{ flagship.status }}</span>
+                    </div>
+                    <h3 class="featured-title">{{ flagship.title }}</h3>
+                    <p class="featured-description">{{ flagship.card_description }}</p>
+                    <div class="featured-tech-tags">
+                        {% for tech in flagship.tech %}
+                        <span class="tech-chip">{{ tech }}</span>
+                        {% endfor %}
+                    </div>
+                    <button class="btn btn-primary featured-cta" data-modal="modal-1">View Full Case Study →</button>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
         <div class="projects-grid">
-            {% for project in site.projects %}
+            {% for project in site.projects offset:1 %}
             <article class="project-card fade-in">
                 <div class="project-screenshot">
                     <img src="{{ project.card_screenshot | relative_url }}" alt="{{ project.title }}" loading="lazy" onerror="this.style.display='none'; this.parentElement.querySelector('.placeholder-icon').style.display='flex';">
-                    <span class="placeholder-icon" style="display:none;">{{ project.placeholder_icon }}</span>
+                    <span class="placeholder-icon" style="display:none;" aria-hidden="true">{{ project.placeholder_icon }}</span>
                 </div>
                 <div class="project-body">
                     <div class="project-meta">
@@ -24,7 +52,7 @@
                         <span class="tech-chip">{{ tech }}</span>
                         {% endfor %}
                     </div>
-                    <button class="project-link" data-modal="modal-{{ forloop.index }}">View Details</button>
+                    <button class="project-link" data-modal="modal-{{ forloop.index | plus: 1 }}">View Details →</button>
                 </div>
             </article>
             {% endfor %}

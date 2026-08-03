@@ -1,0 +1,21 @@
+<section class="skills section" id="skills">
+    <div class="container">
+        <div class="skills-header">
+            <span class="eyebrow">Skills</span>
+            <h2 class="section-title">Engineering Expertise</h2>
+            <p class="skills-intro">Eight years of hands-on production experience across the full platform lifecycle — design, build, integrate, deploy, and operate.</p>
+        </div>
+        <div class="skills-grid">
+            {% for group in site.data.settings.skills %}
+            <div class="skill-group fade-in">
+                <h3 class="skill-group-title">{{ group.category }}</h3>
+                <ul class="skill-list">
+                    {% for item in group.items %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
