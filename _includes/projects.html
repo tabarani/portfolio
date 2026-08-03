@@ -24,7 +24,7 @@
                         <span class="tech-chip">{{ tech }}</span>
                         {% endfor %}
                     </div>
-                    <button class="project-link" data-modal="modal-{{ forloop.index }}">View Details</button>
+                    <button class="project-link" type="button" data-modal="modal-{{ forloop.index }}" aria-haspopup="dialog" aria-controls="modal-{{ forloop.index }}">View Details</button>
                 </div>
             </article>
             {% endfor %}

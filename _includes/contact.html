@@ -3,9 +3,9 @@
         <span class="eyebrow" style="color: var(--accent);">Contact</span>
         <h2 class="section-title">{{ site.data.settings.contact.title }}</h2>
         <p class="contact-subtitle">{{ site.data.settings.contact.subtitle }}</p>
-        <div class="contact-grid">
+        <div class="contact-grid" role="list">
             {% for item in site.data.settings.contact.items %}
-            <a href="{% if item.type == 'cv' %}{{ item.url | relative_url }}{% else %}{{ item.url }}{% endif %}" {% if item.type != 'cv' %}target="_blank" rel="noopener"{% endif %} class="contact-item" aria-label="{{ item.label }}">
+            <a href="{% if item.type == 'cv' %}{{ item.url | relative_url }}{% else %}{{ item.url }}{% endif %}" {% if item.type != 'cv' %}target="_blank" rel="noopener"{% endif %} class="contact-item" aria-label="{{ item.label }}" role="listitem">
                 {% case item.type %}
                 {% when 'email' %}
                 <div class="contact-icon" aria-hidden="true">
