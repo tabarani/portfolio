@@ -1,8 +1,8 @@
 ---
-title: "Yulpana RAG AI Assistant — Moodle Mobile Plugin"
+title: "Yulpana AI Assistant — Moodle Web & Mobile Experience"
 card_tag: "AI • Mobile • RAG"
 status: "Production"
-card_description: "A RAG AI assistant plugin for Moodle with full mobile app support. Features role-aware context injection and source attribution."
+card_description: "A Moodle-facing AI assistant experience for web and mobile, built on the shared Yulpana RAG platform with role-specific workflows and source-aware responses."
 card_screenshot: /images/screenshot-3.png
 placeholder_icon: "MB"
 tech:
@@ -12,7 +12,7 @@ tech:
   - Moodle API
   - JavaScript
   - Mustache
-role: "Built the Moodle web/mobile integration layer and connected it to the shared RAG service with source attribution."
+role: "Solely built the Moodle web and mobile integration layer, role-specific dashboard experiences, and assistant workflows on top of the shared RAG platform."
 status_detail: "Production feature"
 modal_screenshots:
   - image: /images/modal-screenshot-3a.png
@@ -22,21 +22,27 @@ modal_screenshots:
   - image: /images/modal-screenshot-3c.png
     label: "Web Implementation (Same Engine)"
 metrics:
-  - value: "2"
-    label: "Platforms"
-  - value: "<3s"
-    label: "Response Time"
+  - value: "Web + App"
+    label: "Delivery"
+  - value: "4"
+    label: "Primary Audiences"
   - value: "Cited"
-    label: "Sources"
+    label: "Responses"
 sections:
   - title: "Overview"
-    text: "A RAG AI assistant plugin for Moodle that works natively on both web and mobile (iOS/Android via Moodle Mobile app). Students, teachers, parents, and administrators can access an AI tutor that grounds responses in verified course materials."
+    text: "A Moodle-native AI assistant experience that brings the shared Yulpana RAG platform into web and mobile workflows. The implementation serves leadership, teachers, parents, and students through role-specific dashboards, prompts, and action-oriented guidance tied to institutional data."
   - title: "Key Capabilities"
     items:
-      - "**Cross-Platform Chat:** Identical experience on Moodle web, iOS app, and Android app."
-      - "**Role-Aware Context Injection:** Teachers and students receive contextually appropriate responses."
-      - "**Source Document Attribution:** Every response includes links to source materials."
-      - "**On-Premise Execution:** All compute stays on-premise; no cloud dependencies."
+      - "**Cross-Platform Delivery:** Consistent assistant access across Moodle web and the Moodle mobile app experience."
+      - "**Role-Specific Workflows:** Different users receive different prompts and action paths, from management briefs to student study plans and parent support routines."
+      - "**Source-Aware Guidance:** Responses can reference grounded materials instead of operating as unaudited freeform chat."
+      - "**Institution-Ready Deployment:** Built to work with the same on-premise privacy and permission boundaries as the underlying platform."
+  - title: "Audience Workflows"
+    items:
+      - "**Leadership Support:** Executive summaries, signal review, and intervention playbooks tied to dashboard indicators."
+      - "**Teacher Support:** Class diagnosis summaries, grading prioritization, lesson recovery plans, and at-risk intervention prompts."
+      - "**Parent Support:** Child-specific weekly planning, attendance follow-up, missing-work recovery, and fee-awareness guidance."
+      - "**Student Support:** Deadline prioritization, study planning, revision routines, and integrity-aware tutoring assistance."
   - title: "Impact"
-    highlight: "Institutions report 45% increase in after-hours student engagement and 30% improvement in homework assignment quality. Teachers spend less time answering repetitive questions."
+    highlight: "Demonstrates how a governed RAG backend can be translated into practical Moodle experiences for multiple audiences, with role-aware prompts and day-to-day decision support instead of generic chat alone."
 ---

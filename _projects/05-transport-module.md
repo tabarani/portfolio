@@ -2,7 +2,7 @@
 title: "Student Transport & Safety Module"
 card_tag: "Safety • Offline-First Mobile"
 status: "Architecture"
-card_description: "A safety-critical transportation system for Gibbon SIS designed for environments with intermittent connectivity."
+card_description: "A Gibbon-linked transport and safety module designed around offline-first field workflows, alerting, and auditable incident handling."
 card_screenshot: /images/screenshot-5.png
 placeholder_icon: "TR"
 tech:
@@ -11,7 +11,7 @@ tech:
   - Infobip API
   - GPS
   - Redis
-role: "Designed the offline-first workflow, alerting architecture, SIS integration, and audit model."
+role: "Solely designed and developed the offline-first transport workflows, alerting architecture, SIS integration model, and audit-oriented escalation design."
 status_detail: "Architecture case study"
 modal_screenshots:
   - image: /images/modal-screenshot-5a.png
@@ -22,21 +22,21 @@ modal_screenshots:
     label: "Administrator Monitoring Dashboard"
 metrics:
   - value: "Offline"
-    label: "First Design"
-  - value: "<30s"
-    label: "Alert Latency"
-  - value: "99.8%"
-    label: "Uptime"
+    label: "Field Workflow"
+  - value: "SMS"
+    label: "Parent Alerts"
+  - value: "Audit"
+    label: "Escalation Trail"
 sections:
   - title: "Overview"
-    text: "A safety-critical student transportation system for Gibbon SIS, designed for regions with intermittent connectivity. The driver app operates offline-first, recording GPS and incident photos locally; data syncs automatically when connectivity returns."
+    text: "A student transport and safety module designed to extend Gibbon SIS with field-ready workflows for driver operations, incident capture, parent notifications, and administrative oversight. The design assumes intermittent connectivity and prioritizes reliable offline capture with later synchronization."
   - title: "Core Features"
     items:
-      - "**Offline-First Driver App:** React Native with local SQLite; works on 2G/3G networks."
+      - "**Offline-First Driver App:** Mobile workflow designed to capture trips, GPS context, and incident details before connectivity is available."
       - "**Photo Evidence Capture:** Geotagged incident photos with timestamps."
       - "**Automated SMS Alerts:** Infobip integration for real-time parent notifications."
-      - "**Escalation Workflows:** Observer pattern with SLA tracking."
-      - "**Compliance Auditing:** Immutable logs for regulatory compliance."
+      - "**Escalation Workflows:** Structured alerting and follow-up handling for safety-sensitive events."
+      - "**Compliance Auditing:** Audit-oriented records for transport operations, evidence capture, and resolution history."
   - title: "Impact"
-    highlight: "Designed for safer student transport operations through offline-first capture, parent notifications, incident evidence, and auditable escalation workflows."
+    highlight: "Demonstrates operational workflow design for safety-critical environments where offline capture, communications, evidence, and auditability matter as much as the interface itself."
 ---
