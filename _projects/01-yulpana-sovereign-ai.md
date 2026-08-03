@@ -1,8 +1,8 @@
 ---
-title: "Yulpana Sovereign AI & RAG Ecosystem"
+title: "Yulpana Sovereign AI Platform"
 card_tag: "AI • RAG Architecture"
 status: "Production"
-card_description: "An on-premise, privacy-first AI assistant for educational institutions. Engineered a role-aware RAG pipeline using FastAPI and Qdrant."
+card_description: "An on-premise RAG platform for educational institutions, built to power role-aware AI assistants without sending institutional data to external AI services."
 card_screenshot: /images/screenshot-1.png
 placeholder_icon: "AI"
 tech:
@@ -11,7 +11,7 @@ tech:
   - Qdrant
   - Ollama
   - Moodle API
-role: "Architected and implemented the on-premise RAG backend, Moodle integration, vector retrieval, and privacy boundaries."
+role: "Solely architected and implemented the shared RAG backend, retrieval pipeline, privacy boundaries, role-aware access model, and platform integrations."
 status_detail: "Production system"
 modal_screenshots:
   - image: /images/modal-screenshot-1a.png
@@ -21,27 +21,27 @@ modal_screenshots:
   - image: /images/modal-screenshot-1c.png
     label: "Context Injection Pipeline"
 metrics:
-  - value: "<2s"
-    label: "Latency"
-  - value: "Grounded"
-    label: "Responses"
+  - value: "On-Prem"
+    label: "Deployment"
   - value: "Role-Aware"
-    label: "Access"
+    label: "Retrieval"
+  - value: "Cited"
+    label: "Responses"
 sections:
   - title: "Overview"
-    text: "An on-premise, privacy-first AI assistant engineered for educational institutions that cannot afford data exfiltration. The system combines a fast, locally-hosted LLM (Ollama) with a sophisticated role-aware Retrieval-Augmented Generation (RAG) pipeline, ensuring that sensitive student and institutional data never leaves the school's network."
+    text: "A shared on-premise AI platform designed for educational institutions that need local control over data, permissions, and retrieval logic. The system combines locally hosted language models with a role-aware RAG pipeline so that AI assistants can answer from institutional sources while respecting audience boundaries."
   - title: "Key Challenges Solved"
     items:
-      - "**Data Sovereignty:** All student data, course materials, and institutional records remain on-premise, never sent to external cloud APIs."
-      - "**Hallucination-Free Responses:** Role-isolated context injection ensures the LLM always grounds responses in verified institutional data."
-      - "**GDPR & PDPL Compliance:** Built from the ground up with strict privacy boundaries; no tracking, no external log aggregation."
-      - "**Role-Aware Retrieval:** A teacher sees different context than a student, even when asking identical questions—enforced at the pipeline level."
+      - "**Data Sovereignty:** Institutional content and user context remain inside local infrastructure rather than external AI APIs."
+      - "**Governed Retrieval:** Responses are grounded in available source material with role-aware context selection and attribution."
+      - "**Privacy-Conscious Design:** The platform was shaped around strict boundaries for institutional data handling and permission-aware access."
+      - "**Role-Aware Delivery:** Leaders, teachers, parents, and students can be served from the same platform with different context rules and prompts."
   - title: "Technical Highlights"
     items:
-      - "**FastAPI Backend:** Async request handling for low-latency RAG queries across thousands of concurrent users."
-      - "**Qdrant Vector Store:** Semantic search over multi-million-document repositories, with native filtering by role/context."
-      - "**Ollama Integration:** Runs open-source LLMs (Mistral, Llama 2) locally; no external API calls or vendor lock-in."
-      - "**Moodle Native:** Direct integration with Moodle's web services API; works seamlessly with existing course structure and user enrollment data."
+      - "**FastAPI Backend:** Shared application layer for retrieval, orchestration, prompt assembly, and downstream integrations."
+      - "**Qdrant Vector Store:** Semantic retrieval over institutional knowledge with filtering strategies that preserve role and context boundaries."
+      - "**Local Model Hosting:** Ollama-based deployment supports open-source models without routing sensitive data through external providers."
+      - "**Platform Reuse:** The same backend can serve Moodle experiences, leadership workflows, and audience-specific assistants from one governed core."
   - title: "Impact"
-    highlight: "Reduced average student support response time by 70% while maintaining strict PDPL compliance. Institutions can now offer 24/7 intelligent tutoring without sacrificing data privacy."
+    highlight: "Shows end-to-end ownership of a governed AI platform: local deployment, retrieval design, source-aware responses, and permission-conscious integration for institutional use."
 ---

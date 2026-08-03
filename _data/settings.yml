@@ -24,8 +24,8 @@ navbar:
 hero:
   eyebrow: "Senior Software Engineer • Systems Architect • Innovator"
   headline: "Mustafa Elnaiem architects intelligent systems that empower institutions."
-  subtitle: "I am a creative systems architect and EdTech innovator. I specialize in designing scalable, clean architectures and building autonomous, on-premise AI solutions from the ground up, engineered with strict GDPR and PDPL compliance at their core."
-  availability_note: "Open to senior engineering, systems architecture, EdTech, and AI infrastructure collaborations."
+  subtitle: "I design and develop institution-grade software end-to-end as a sole engineer, spanning backend platforms, Moodle and Gibbon extensions, identity infrastructure, finance and reporting workflows, and governed on-premise AI assistants for privacy-sensitive environments."
+  availability_note: "Open to senior backend, platform, systems architecture, EdTech, and AI infrastructure roles."
 
 core_stack:
   - label: "Languages"
@@ -48,35 +48,35 @@ core_stack:
 what_i_build_title: "Institutional systems with clean architecture and practical AI."
 
 what_i_build:
-  - title: "Privacy-first AI platforms"
-    description: "On-premise LLMs, RAG pipelines, vector search, source attribution, and role-aware context boundaries."
-  - title: "Moodle and Gibbon ecosystems"
-    description: "Dashboards, plugins, SIS/LMS integrations, attendance, finance, reporting, and mobile-aware workflows."
-  - title: "Identity and access infrastructure"
-    description: "OIDC, SSO, RBAC, claims enrichment, identity reconciliation, and audit-ready authentication flows."
-  - title: "Analytics and automation"
-    description: "Operational dashboards, scheduled reports, notifications, data validation, and decision-support tools."
-  - title: "Production backend systems"
-    description: "Clean Architecture services, database design, APIs, migrations, observability, and deployment hardening."
-  - title: "Compliance-aware engineering"
-    description: "GDPR/PDPL-aligned data flows, local data sovereignty, audit trails, and permission-first design."
+  - title: "Governed AI for institutions"
+    description: "On-premise RAG assistants with source attribution, role-aware context boundaries, dashboard-driven workflows, and privacy-first deployment constraints."
+  - title: "Moodle and Gibbon platform engineering"
+    description: "Production plugins and modules for dashboards, attendance, transport, finance, reporting, and mobile-aware institutional workflows."
+  - title: "Identity and integration infrastructure"
+    description: "OIDC, RBAC, claims enrichment, reconciliation across LMS/SIS systems, and audit-ready API layers for new application onboarding."
+  - title: "Operational analytics and automation"
+    description: "Role-based dashboards, scheduled reports, alerts, validation routines, and decision-support flows for administrators, teachers, parents, and students."
+  - title: "Enterprise backend architecture"
+    description: "Clean Architecture services, CQRS, stateful workflow design, database modeling, migrations, and deployment hardening for long-lived systems."
+  - title: "Finance and compliance workflows"
+    description: "Journal controls, reconciliations, payroll and month-end processes, audit trails, approvals, and GDPR/PDPL-aware data handling."
 
 about:
   title: "Creative engineer and EdTech innovator."
-  lead: "I bridge the gap between academic research and practical, high-impact enterprise architecture."
+  lead: "I build practical institutional platforms that combine backend rigor, operational clarity, and privacy-aware AI."
   paragraphs:
-    - "Currently, I serve as a Senior Software Developer at an educational institution in Madinah, where I oversee the technical ecosystem. My work goes far beyond writing code; I focus on comprehensive technical documentation, rigorous system design, and building resilient, GDPR and PDPL-compliant platforms that institutions rely on daily."
-    - "In January 2026, I co-founded [Yulpana EdTech](https://www.yulpana.com), a venture dedicated to pushing the boundaries of educational technology. Through Yulpana, I have developed sovereign, on-premise AI assistants and complex, role-aware Retrieval-Augmented Generation (RAG) pipelines. By keeping data localized and enforcing strict privacy boundaries, I ensure context-rich interactions without compromising institutional data sovereignty."
-    - "I hold a Master of Science in Computer Science and bring a deep appreciation for structure and linguistics to my work—whether I am implementing Clean Architecture design patterns, ensuring global data privacy standards, or composing original Arabic poetry."
+    - "I work as a Senior Software Developer in Madinah, where I design and develop institutional software across Moodle, Gibbon, custom APIs, analytics, identity, and operational workflows. My focus is on systems that are maintainable, audit-ready, and useful to the people who run schools and higher-education operations every day."
+    - "As the sole engineer behind multiple production and case-study systems, I have built role-aware dashboards, on-premise AI assistants, identity reconciliation services, finance workflows, reporting pipelines, and integrations that connect LMS, SIS, directory, and messaging layers without losing control of privacy or permissions."
+    - "I hold a Master of Science in Computer Science and bring a strong preference for structure to every project—from Clean Architecture and bounded workflows to bilingual user experiences, technical documentation, and compliance-conscious data design."
   yulpana_url: "https://www.yulpana.com"
   yulpana_button_text: "Visit Yulpana EdTech"
   focus_title: "Currently focused on"
   focus_items:
-    - "Deploying sovereign, on-premise LLMs (via Ollama) to guarantee data sovereignty."
-    - "Engineering role-aware RAG pipelines using FastAPI and Qdrant."
-    - "Ensuring strict GDPR and PDPL compliance across federated identity and AI data flows."
-    - "Scaling Clean Architecture microservices across Moodle and Gibbon SIS."
-    - "Bridging academic research with production-grade enterprise systems."
+    - "Building on-premise AI assistants with role-aware retrieval, source attribution, and institution-specific workflow prompts."
+    - "Designing backend and integration layers that connect Moodle, Gibbon, directory services, and custom applications."
+    - "Embedding auditability, approvals, and privacy controls into identity, finance, and reporting workflows."
+    - "Applying Clean Architecture, CQRS, and explicit workflow modeling to long-lived institutional systems."
+    - "Turning operational school data into usable dashboards and action-oriented decision support."
 
 contact:
   title: "Let's Connect"
