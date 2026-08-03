@@ -1,0 +1,46 @@
+---
+# Main portfolio page — assembles all sections from _includes/
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('portfolio-theme');
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+                document.documentElement.dataset.theme = theme;
+                document.documentElement.style.colorScheme = theme;
+            } catch (error) {
+                document.documentElement.dataset.theme = 'light';
+                document.documentElement.style.colorScheme = 'light';
+            }
+        })();
+    </script>
+    {% include head.html %}
+</head>
+<body>
+
+    <noscript>
+        <div class="noscript-message">This portfolio works best with JavaScript enabled. Project details and image previews may be limited without it.</div>
+    </noscript>
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    {% include navbar.html %}
+
+    <main id="main-content">
+        {% include hero.html %}
+        {% include what-i-build.html %}
+        {% include about.html %}
+        {% include projects.html %}
+        {% include lightbox.html %}
+        {% include contact.html %}
+    </main>
+
+    {% include footer.html %}
+
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>

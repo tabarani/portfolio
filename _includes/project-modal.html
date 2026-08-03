@@ -1,0 +1,60 @@
+<div class="modal-overlay" id="modal-{{ include.index }}" role="dialog" aria-modal="true" aria-labelledby="modal-title-{{ include.index }}">
+    <div class="modal-container">
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+        <div class="modal-header">
+            <span class="modal-tag">{{ include.project.card_tag }}</span>
+            <h2 class="modal-title" id="modal-title-{{ include.index }}">{{ include.project.title }}</h2>
+            <div class="modal-tech-tags">
+                {% for tech in include.project.tech %}
+                <span class="modal-tech-chip">{{ tech }}</span>
+                {% endfor %}
+            </div>
+            <div class="modal-role-summary">
+                <div><span>My Role</span><strong>{{ include.project.role }}</strong></div>
+                <div><span>Status</span><strong>{{ include.project.status_detail }}</strong></div>
+            </div>
+        </div>
+        <div class="modal-content">
+            {% if include.project.modal_screenshots.size > 0 %}
+            <div class="modal-screenshots">
+                {% for shot in include.project.modal_screenshots %}
+                <div class="modal-screenshot-item lightbox-trigger" data-group="modal-{{ include.index }}" data-index="{{ forloop.index0 }}">
+                    <img src="{{ shot.image | relative_url }}" alt="{{ shot.label }}" loading="lazy" onerror="this.style.display='none';">
+                    <div class="modal-screenshot-label">{{ shot.label }}</div>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            {% if include.project.metrics.size > 0 %}
+            <div class="modal-metrics">
+                {% for metric in include.project.metrics %}
+                <div class="metric-item">
+                    <div class="metric-value">{{ metric.value | escape }}</div>
+                    <div class="metric-label">{{ metric.label }}</div>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            {% for section in include.project.sections %}
+            <div class="modal-section">
+                <h3 class="modal-section-title">{{ section.title }}</h3>
+                {% if section.text %}
+                <p class="modal-text">{{ section.text }}</p>
+                {% endif %}
+                {% if section.items.size > 0 %}
+                <ul class="modal-list">
+                    {% for item in section.items %}
+                    <li>{{ item | markdownify }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                {% if section.highlight %}
+                <div class="modal-highlight">{{ section.highlight }}</div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

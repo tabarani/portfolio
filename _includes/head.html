@@ -1,0 +1,53 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="{{ site.data.settings.seo.description }}">
+<meta name="theme-color" content="#0a1628">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+
+<!-- Open Graph / LinkedIn Meta Tags -->
+<meta property="og:title" content="{{ site.data.settings.seo.og_title }}">
+<meta property="og:description" content="{{ site.data.settings.seo.og_description }}">
+<meta property="og:image" content="{{ site.data.settings.seo.og_image | absolute_url }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.data.settings.seo.og_site_name }}">
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ site.data.settings.seo.og_title }}">
+<meta name="twitter:description" content="{{ site.data.settings.seo.og_description }}">
+<meta name="twitter:image" content="{{ site.data.settings.seo.og_image | absolute_url }}">
+
+<title>{{ site.data.settings.seo.title }}</title>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{{ site.data.settings.seo.person_name }}",
+    "jobTitle": "{{ site.data.settings.seo.job_title }}",
+    "url": "{{ '/' | absolute_url }}",
+    "sameAs": [
+        "{{ site.data.settings.seo.github_url }}",
+        "{{ site.data.settings.seo.linkedin_url }}",
+        "{{ site.data.settings.seo.website_url }}"
+    ],
+    "knowsAbout": [
+        "Educational Technology",
+        "Moodle",
+        "Gibbon SIS",
+        "OpenID Connect",
+        "Retrieval-Augmented Generation",
+        "On-Premise AI",
+        "Clean Architecture",
+        "GDPR",
+        "PDPL"
+    ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">

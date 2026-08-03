@@ -1,0 +1,16 @@
+<section class="build" id="build">
+    <div class="container">
+        <div class="build-header fade-in">
+            <span class="eyebrow">What I Build</span>
+            <h2 class="section-title">{{ site.data.settings.what_i_build_title }}</h2>
+        </div>
+        <div class="build-grid">
+            {% for card in site.data.settings.what_i_build %}
+            <div class="build-card fade-in">
+                <h3>{{ card.title }}</h3>
+                <p>{{ card.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

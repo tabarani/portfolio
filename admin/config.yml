@@ -1,0 +1,176 @@
+# ============================================================
+# Decap CMS Configuration
+# Docs: https://decapcms.org/docs/configuration-options/
+# ============================================================
+
+backend:
+  name: github
+  repo: tabarani/portfolio
+  branch: main
+  auth_type: pkce
+  base_url: https://tabarani.github.io/portfolio
+
+# IMPORTANT: Before using the admin panel, create a GitHub OAuth App:
+#   GitHub > Settings > Developer settings > OAuth Apps > New OAuth App
+#   - Application name: Portfolio CMS
+#   - Homepage URL: https://tabarani.github.io/portfolio
+#   - Authorization callback URL: https://api.netlify.com/auth/done
+# Then paste the Client ID below:
+# client_id: "YOUR_OAUTH_CLIENT_ID"
+
+media_folder: "images"
+public_folder: "/images"
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+
+collections:
+  # ==========================================
+  # PROJECTS — one entry per project card/modal
+  # ==========================================
+  - name: "projects"
+    label: "Projects"
+    folder: "_projects"
+    create: true
+    delete: true
+    slug: "{{year}}-{{slug}}"
+    summary: "{{title}} ({{status}})"
+    fields:
+      - { name: "title", label: "Project Title", widget: "string" }
+      - { name: "card_tag", label: "Card Tag", widget: "string", hint: "Short category shown on the card, e.g. 'AI • RAG Architecture'" }
+      - { name: "status", label: "Status Badge", widget: "select", options: ["Production", "Case Study", "Architecture", "In Development"] }
+      - { name: "card_description", label: "Card Description", widget: "text", hint: "One or two sentences shown on the project card." }
+      - { name: "card_screenshot", label: "Card Screenshot", widget: "image", allow_multiple: false, hint: "Shown at the top of the project card (16:10 recommended)." }
+      - { name: "placeholder_icon", label: "Placeholder Icon Text", widget: "string", required: false, hint: "Two-letter fallback shown if the screenshot fails to load, e.g. 'AI'." }
+      - name: "tech"
+        label: "Tech Stack Chips"
+        widget: "list"
+        summary: "{{fields.tech}}"
+        field: { name: "tech", label: "Technology", widget: "string" }
+      - { name: "role", label: "My Role", widget: "text", hint: "Shown in the modal header under 'My Role'." }
+      - { name: "status_detail", label: "Status Detail", widget: "string", hint: "e.g. 'Production system', 'Architecture case study'." }
+      - name: "modal_screenshots"
+        label: "Modal Screenshots"
+        widget: "list"
+        summary: "{{fields.label}}"
+        fields:
+          - { name: "image", label: "Screenshot Image", widget: "image", allow_multiple: false }
+          - { name: "label", label: "Caption Label", widget: "string" }
+      - name: "metrics"
+        label: "Metrics Row"
+        widget: "list"
+        summary: "{{fields.value}} — {{fields.label}}"
+        fields:
+          - { name: "value", label: "Value", widget: "string", hint: "e.g. '<2s', '99.9%', '8,000+'" }
+          - { name: "label", label: "Label", widget: "string" }
+      - name: "sections"
+        label: "Content Sections"
+        widget: "list"
+        summary: "{{fields.title}}"
+        fields:
+          - { name: "title", label: "Section Title", widget: "string", hint: "e.g. 'Overview', 'Core Features', 'Impact'." }
+          - { name: "text", label: "Paragraph Text", widget: "text", required: false, hint: "Plain paragraph (used for Overview). Leave empty if using bullet points." }
+          - name: "items"
+            label: "Bullet Points"
+            widget: "list"
+            required: false
+            summary: "{{fields.item}}"
+            field: { name: "item", label: "Bullet (supports **bold**)", widget: "markdown", minimal: true }
+          - { name: "highlight", label: "Highlight Box", widget: "text", required: false, hint: "Blue highlight box (used for Impact). Leave empty if not needed." }
+
+  # ==========================================
+  # SITE SETTINGS — hero, about, contact, stack
+  # ==========================================
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "general"
+        label: "Global Content"
+        file: "_data/settings.yml"
+        fields:
+          - name: "seo"
+            label: "SEO & Social Sharing"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Page Title", widget: "string" }
+              - { name: "description", label: "Meta Description", widget: "text" }
+              - { name: "og_title", label: "Share Title (LinkedIn/WhatsApp)", widget: "string" }
+              - { name: "og_description", label: "Share Description", widget: "text" }
+              - { name: "og_image", label: "Share Preview Image", widget: "image", allow_multiple: false }
+              - { name: "og_site_name", label: "Site Name", widget: "string" }
+              - { name: "person_name", label: "Person Name (Schema.org)", widget: "string" }
+              - { name: "job_title", label: "Job Title (Schema.org)", widget: "string" }
+              - { name: "github_url", label: "GitHub Profile URL", widget: "string" }
+              - { name: "linkedin_url", label: "LinkedIn Profile URL", widget: "string" }
+              - { name: "website_url", label: "Website URL (Yulpana)", widget: "string" }
+          - name: "navbar"
+            label: "Navigation Bar"
+            widget: "object"
+            fields:
+              - { name: "brand_initials", label: "Brand Initials", widget: "string" }
+              - { name: "brand_name", label: "Brand Name", widget: "string" }
+              - { name: "brand_subtitle", label: "Brand Subtitle", widget: "string" }
+              - { name: "location", label: "Location Text", widget: "string" }
+          - name: "hero"
+            label: "Hero Section"
+            widget: "object"
+            fields:
+              - { name: "eyebrow", label: "Eyebrow Line", widget: "string" }
+              - { name: "headline", label: "Headline", widget: "string" }
+              - { name: "subtitle", label: "Subtitle Paragraph", widget: "text" }
+              - { name: "availability_note", label: "Availability Note", widget: "string" }
+          - name: "core_stack"
+            label: "Core Stack Card"
+            widget: "list"
+            summary: "{{fields.label}}"
+            fields:
+              - { name: "label", label: "Category Label", widget: "string" }
+              - { name: "items", label: "Items (comma-separated)", widget: "string" }
+          - { name: "what_i_build_title", label: "'What I Build' Section Title", widget: "string" }
+          - name: "what_i_build"
+            label: "What I Build Cards"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { name: "title", label: "Card Title", widget: "string" }
+              - { name: "description", label: "Card Description", widget: "text" }
+          - name: "about"
+            label: "About Section"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Section Title", widget: "string" }
+              - { name: "lead", label: "Lead Sentence", widget: "string" }
+              - name: "paragraphs"
+                label: "Paragraphs"
+                widget: "list"
+                summary: "{{fields.paragraph}}"
+                field: { name: "paragraph", label: "Paragraph (supports [links](url))", widget: "markdown" }
+              - { name: "yulpana_url", label: "Yulpana URL", widget: "string" }
+              - { name: "yulpana_button_text", label: "Yulpana Button Text", widget: "string" }
+              - { name: "focus_title", label: "Focus Box Title", widget: "string" }
+              - name: "focus_items"
+                label: "Focus List Items"
+                widget: "list"
+                summary: "{{fields.item}}"
+                field: { name: "item", label: "Focus Item", widget: "string" }
+          - name: "contact"
+            label: "Contact Section"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Section Title", widget: "string" }
+              - { name: "subtitle", label: "Subtitle", widget: "text" }
+              - name: "items"
+                label: "Contact Links"
+                widget: "list"
+                summary: "{{fields.label}} ({{fields.type}})"
+                fields:
+                  - { name: "type", label: "Icon Type", widget: "select", options: ["email", "cv", "github", "linkedin", "telegram", "website"] }
+                  - { name: "label", label: "Label", widget: "string" }
+                  - { name: "value", label: "Sub-value (optional)", widget: "string", required: false }
+                  - { name: "url", label: "URL", widget: "string" }
+          - name: "footer"
+            label: "Footer"
+            widget: "object"
+            fields:
+              - { name: "text", label: "Copyright Text", widget: "string" }

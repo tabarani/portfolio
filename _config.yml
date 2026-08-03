@@ -1,0 +1,29 @@
+# ==============================================
+# Jekyll Configuration — Mustafa Elnaiem Portfolio
+# ==============================================
+
+title: "Mustafa Elnaiem — Senior Software Engineer & Systems Architect"
+description: "Portfolio showcasing intelligent systems for modern education — on-premise AI, Moodle & Gibbon ecosystems, identity infrastructure."
+
+# DEPLOYMENT: When hosting at https://USERNAME.github.io/REPO-NAME,
+# set url and baseurl as follows (uncomment and fill in):
+# url: "https://USERNAME.github.io"
+# baseurl: "/REPO-NAME"
+url: "https://tabarani.github.io"
+baseurl: "/portfolio"
+
+collections:
+  projects:
+    output: false
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: null
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

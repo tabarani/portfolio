@@ -1,0 +1,106 @@
+# ==============================================
+# SITE SETTINGS — Edit via /admin (Decap CMS) or directly here
+# ==============================================
+
+seo:
+  title: "Mustafa Elnaiem — Senior Software Engineer & Systems Architect"
+  description: "Mustafa Elnaiem — Senior Software Engineer, Systems Architect, and EdTech Innovator. Portfolio showcasing intelligent systems for modern education."
+  og_title: "Mustafa Elnaiem — Systems Architect & Innovator"
+  og_description: "Portfolio showcasing intelligent, on-premise systems and EdTech innovations."
+  og_image: /images/screenshot-1.png
+  og_site_name: "Mustafa Elnaiem Portfolio"
+  person_name: "Mustafa Elnaiem"
+  job_title: "Senior Software Engineer and Systems Architect"
+  github_url: "https://github.com/tabarani"
+  linkedin_url: "https://www.linkedin.com/in/mustafa-elnaiem-78098872/"
+  website_url: "https://www.yulpana.com"
+
+navbar:
+  brand_initials: "ME"
+  brand_name: "Mustafa Elnaiem"
+  brand_subtitle: "Software Engineer"
+  location: "Based in Medina, Saudi Arabia"
+
+hero:
+  eyebrow: "Senior Software Engineer • Systems Architect • Innovator"
+  headline: "Mustafa Elnaiem architects intelligent systems that empower institutions."
+  subtitle: "I am a creative systems architect and EdTech innovator. I specialize in designing scalable, clean architectures and building autonomous, on-premise AI solutions from the ground up, engineered with strict GDPR and PDPL compliance at their core."
+  availability_note: "Open to senior engineering, systems architecture, EdTech, and AI infrastructure collaborations."
+
+core_stack:
+  - label: "Languages"
+    items: "C#, PHP, JavaScript, Python"
+  - label: "Platforms"
+    items: ".NET Core, FastAPI, Moodle LMS, Gibbon SIS"
+  - label: "Tools & Libraries"
+    items: "Chart.js, Mustache, DataTables, jQuery, Bootstrap"
+  - label: "Data"
+    items: "Qdrant, Relational Databases"
+  - label: "Identity"
+    items: "RBAC, SIS Integrations, OIDC"
+  - label: "Infra"
+    items: "On-Premise LLMs, Ollama, Docker"
+  - label: "DevOps"
+    items: "Ubuntu Server Admin, Hardening, Shell Scripting, DB Optimization"
+  - label: "Patterns"
+    items: "Clean Architecture, Privacy by Design, Factory, Observer, Decorator and appropriate design patterns according to case"
+
+what_i_build_title: "Institutional systems with clean architecture and practical AI."
+
+what_i_build:
+  - title: "Privacy-first AI platforms"
+    description: "On-premise LLMs, RAG pipelines, vector search, source attribution, and role-aware context boundaries."
+  - title: "Moodle and Gibbon ecosystems"
+    description: "Dashboards, plugins, SIS/LMS integrations, attendance, finance, reporting, and mobile-aware workflows."
+  - title: "Identity and access infrastructure"
+    description: "OIDC, SSO, RBAC, claims enrichment, identity reconciliation, and audit-ready authentication flows."
+  - title: "Analytics and automation"
+    description: "Operational dashboards, scheduled reports, notifications, data validation, and decision-support tools."
+  - title: "Production backend systems"
+    description: "Clean Architecture services, database design, APIs, migrations, observability, and deployment hardening."
+  - title: "Compliance-aware engineering"
+    description: "GDPR/PDPL-aligned data flows, local data sovereignty, audit trails, and permission-first design."
+
+about:
+  title: "Creative engineer and EdTech innovator."
+  lead: "I bridge the gap between academic research and practical, high-impact enterprise architecture."
+  paragraphs:
+    - "Currently, I serve as a Senior Software Developer at an educational institution in Madinah, where I oversee the technical ecosystem. My work goes far beyond writing code; I focus on comprehensive technical documentation, rigorous system design, and building resilient, GDPR and PDPL-compliant platforms that institutions rely on daily."
+    - "In January 2026, I co-founded [Yulpana EdTech](https://www.yulpana.com), a venture dedicated to pushing the boundaries of educational technology. Through Yulpana, I have developed sovereign, on-premise AI assistants and complex, role-aware Retrieval-Augmented Generation (RAG) pipelines. By keeping data localized and enforcing strict privacy boundaries, I ensure context-rich interactions without compromising institutional data sovereignty."
+    - "I hold a Master of Science in Computer Science and bring a deep appreciation for structure and linguistics to my work—whether I am implementing Clean Architecture design patterns, ensuring global data privacy standards, or composing original Arabic poetry."
+  yulpana_url: "https://www.yulpana.com"
+  yulpana_button_text: "Visit Yulpana EdTech"
+  focus_title: "Currently focused on"
+  focus_items:
+    - "Deploying sovereign, on-premise LLMs (via Ollama) to guarantee data sovereignty."
+    - "Engineering role-aware RAG pipelines using FastAPI and Qdrant."
+    - "Ensuring strict GDPR and PDPL compliance across federated identity and AI data flows."
+    - "Scaling Clean Architecture microservices across Moodle and Gibbon SIS."
+    - "Bridging academic research with production-grade enterprise systems."
+
+contact:
+  title: "Let's Connect"
+  subtitle: "Interested in collaborating or learning more about my work? Reach out through any of the channels below."
+  items:
+    - type: "email"
+      label: "Email"
+      url: "mailto:8masan8@gmail.com"
+    - type: "cv"
+      label: "Resume"
+      value: "Download CV"
+      url: "/assets/cv/Mustafa_Elnaiem_CV.pdf"
+    - type: "github"
+      label: "GitHub"
+      url: "https://github.com/mustafaelnaiem"
+    - type: "linkedin"
+      label: "LinkedIn"
+      url: "https://www.linkedin.com/in/mustafa-elnaiem-78098872/"
+    - type: "telegram"
+      label: "Telegram"
+      url: "https://t.me/MustafaElnaiem"
+    - type: "website"
+      label: "Website"
+      url: "https://www.yulpana.com"
+
+footer:
+  text: "© 2026 Mustafa Elnaiem — Senior Software Engineer and Systems Architect based in Medina, Saudi Arabia."

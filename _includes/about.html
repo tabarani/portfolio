@@ -1,0 +1,32 @@
+<section class="about section" id="about">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-content">
+                <span class="eyebrow">About</span>
+                <h2 class="section-title">{{ site.data.settings.about.title }}</h2>
+                <p class="about-lead">{{ site.data.settings.about.lead }}</p>
+                <div class="about-text">
+                    {% for paragraph in site.data.settings.about.paragraphs %}
+                    {{ paragraph | markdownify }}
+                    {% endfor %}
+                    <p style="margin-top: 16px;">
+                        <a href="{{ site.data.settings.about.yulpana_url }}" target="_blank" rel="noopener" class="btn btn-secondary" aria-label="Open Yulpana EdTech website in a new tab" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; padding: 10px 20px;">
+                            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 0c2.5 2.7 3.8 6 3.8 10S14.5 19.3 12 22m0-20C9.5 4.7 8.2 8 8.2 12s1.3 7.3 3.8 10M2.8 8h18.4M2.8 16h18.4"/>
+                            </svg>
+                            {{ site.data.settings.about.yulpana_button_text }}
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="focus-box fade-in">
+                <h3 class="focus-box-title">{{ site.data.settings.about.focus_title }}</h3>
+                <ul class="focus-list">
+                    {% for item in site.data.settings.about.focus_items %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
