@@ -1,0 +1,31 @@
+<section class="experience section" id="experience">
+    <div class="container">
+        <span class="eyebrow">Experience</span>
+        <h2 class="section-title">Where I've Worked</h2>
+        <div class="experience-timeline">
+            {% for job in site.data.settings.experience %}
+            <div class="exp-item fade-in">
+                <div class="exp-marker" aria-hidden="true"></div>
+                <div class="exp-content">
+                    <div class="exp-header">
+                        <div class="exp-title-block">
+                            <h3 class="exp-role">{{ job.role }}</h3>
+                            <div class="exp-company">
+                                {{ job.company }}
+                                <span class="exp-location">{{ job.location }}</span>
+                            </div>
+                        </div>
+                        <span class="exp-period">{{ job.period }}</span>
+                    </div>
+                    <p class="exp-description">{{ job.description }}</p>
+                    <ul class="exp-achievements">
+                        {% for achievement in job.achievements %}
+                        <li>{{ achievement }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
