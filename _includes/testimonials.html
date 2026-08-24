@@ -1,0 +1,84 @@
+{% if site.data.settings.testimonials %}
+<section id="testimonials" class="testimonials-section">
+    <div class="container">
+        <h2 class="section-title fade-in">What Colleagues Say</h2>
+        
+        <div class="testimonials-grid">
+            {% for testimonial in site.data.settings.testimonials %}
+            <blockquote class="testimonial-card fade-in">
+                <div class="testimonial-content">
+                    <p class="testimonial-text">"{{ testimonial.quote }}"</p>
+                </div>
+                <footer class="testimonial-author">
+                    <div class="author-info">
+                        <cite class="author-name">{{ testimonial.name }}</cite>
+                        <span class="author-title">{{ testimonial.title }}</span>
+                    </div>
+                </footer>
+            </blockquote>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<style>
+.testimonials-section {
+    padding: var(--section-padding);
+    background: var(--gray-100);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.testimonial-card {
+    background: var(--white);
+    padding: 32px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-4px);
+}
+
+.testimonial-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--gray-700);
+    margin-bottom: 24px;
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--gray-200);
+}
+
+.author-name {
+    display: block;
+    font-weight: 600;
+    color: var(--text);
+    font-style: normal;
+}
+
+.author-title {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--gray-500);
+}
+
+@media (max-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+{% endif %}

@@ -174,3 +174,20 @@ collections:
             widget: "object"
             fields:
               - { name: "text", label: "Copyright Text", widget: "string" }
+  - name: "testimonials"
+    label: "Testimonials"
+    folder: "_data"
+    identifier_field: name
+    files:
+      - name: "settings_testimonials"
+        label: "Testimonials Data"
+        file: "_data/settings.yml"
+        fields:
+          - name: "testimonials"
+            label: "Client Testimonials"
+            widget: "list"
+            summary: "{{fields.name}} - {{fields.title}}"
+            fields:
+              - { name: "name", label: "Person Name", widget: "string" }
+              - { name: "title", label: "Job Title / Organization", widget: "string" }
+              - { name: "quote", label: "Testimonial Quote", widget: "text" }
