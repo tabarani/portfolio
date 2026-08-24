@@ -1,0 +1,16 @@
+# robots.txt for Mustafa Elnaiem Portfolio
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://tabarani.github.io/portfolio/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Disallow admin area (Decap CMS)
+Disallow: /admin/
+
+# Disallow assets that don't need indexing
+Disallow: /assets/css/
+Disallow: /assets/js/

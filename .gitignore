@@ -1,7 +1,29 @@
-_site/
+```
+# Dependencies
+vendor/bundle/
 .jekyll-cache/
 .sass-cache/
-Gemfile.lock
-vendor/
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.local
+*.env.*
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+
+# OS generated files
 .DS_Store
 Thumbs.db
+
+# Build artifacts
+_site/
+.ssg-cache/
+```
