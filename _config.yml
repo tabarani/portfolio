@@ -4,6 +4,8 @@
 
 title: "Mustafa Elnaiem — Senior Software Engineer & Systems Architect"
 description: "Portfolio showcasing intelligent systems for modern education — on-premise AI, Moodle & Gibbon ecosystems, identity infrastructure."
+author: "Mustafa Elnaiem"
+keywords: "software engineer, systems architect, EdTech, AI, RAG, Moodle, Gibbon, privacy-first, on-premise LLM"
 
 # DEPLOYMENT: When hosting at https://USERNAME.github.io/REPO-NAME,
 # set url and baseurl as follows (uncomment and fill in):
@@ -12,18 +14,41 @@ description: "Portfolio showcasing intelligent systems for modern education — 
 url: "https://tabarani.github.io"
 baseurl: "/portfolio"
 
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Sitemap configuration
+sitemap:
+  file: "/sitemap.xml"
+  exclude:
+    - "/admin/"
+  include_posts: []
+
 collections:
   projects:
     output: false
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
 
 defaults:
   - scope:
       path: ""
     values:
       layout: null
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      tags: []
 
 exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
   - vendor
+  - node_modules
+  - "*.log"

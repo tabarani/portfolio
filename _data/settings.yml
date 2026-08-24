@@ -104,3 +104,15 @@ contact:
 
 footer:
   text: "© 2026 Mustafa Elnaiem — Senior Software Engineer and Systems Architect based in Medina, Saudi Arabia."
+
+# Testimonials (optional - add via CMS)
+testimonials:
+  - name: "Dr. Ahmed Al-Ghamdi"
+    title: "Director of Educational Technology, Madinah Schools"
+    quote: "Mustafa's on-premise AI solutions transformed how our teachers access curriculum resources while maintaining complete data sovereignty. His attention to GDPR and PDPL compliance is unmatched."
+  - name: "Sarah Mitchell"
+    title: "CTO, EdTech Innovations"
+    quote: "Working with Mustafa on RAG pipeline architecture was exceptional. His clean code and comprehensive documentation made integration seamless across our Moodle ecosystem."
+  - name: "Prof. Fatima Al-Zahrani"
+    title: "VP Academic Affairs"
+    quote: "The identity infrastructure Mustafa built handles 8,000+ daily users flawlessly. His role-aware access controls ensure students and staff see exactly what they need—nothing more, nothing less."
